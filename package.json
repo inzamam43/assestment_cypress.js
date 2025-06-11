@@ -1,0 +1,22 @@
+{
+  "name": "assestment_cypress",
+  "version": "1.0.0",
+  "description": "test automation suite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inzamam43/assestment_cypress.js.git"
+  },
+  "author": "M inzamam akbar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inzamam43/assestment_cypress.js/issues"
+  },
+  "homepage": "https://github.com/inzamam43/assestment_cypress.js#readme",
+  "dependencies": {
+    "cypress": "^14.4.1"
+  }
+}
