@@ -1,0 +1,26 @@
+{
+  "personalInfo": {
+    "firstName": "Emma",
+    "lastName": "Johnson",
+    "dateOfBirth": "05/15/1990",
+    "gender": "Female",
+    "email": "emma.johnson@example.com",
+    "password": "SecurePass123!",
+    "rememberMe": true,
+    "phoneNumber": "5551234567",
+    "address": "123 Maple Street, Apt 4B",
+    "uploadFile": "cypress/fixtures/QA_Automation.pdf"
+  },
+  "formControls": {
+    "color": "#ff0000",
+    "checkbox": true,
+    "singleSelect": "Option 2",
+    "multiSelect": ["Option 1", "Option 3"],
+    "textArea": "This is a sample text for testing purposes.",
+    "search": "test query",
+    "url": "https://react-qa-test.netlify.app",
+    "telephone": "+1-555-123-4567",
+    "date": "12/25/2023",
+    "time": "14:30"
+  }
+}

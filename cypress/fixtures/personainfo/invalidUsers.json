@@ -1,0 +1,39 @@
+{
+  "Personal_Information":{
+    "testCase": "Missing required fields",
+    "firstName": ".",
+    "lastName": "Doe",
+    "email": "john@example.com",
+    "password": "Pass123!",
+    "confirmPassword": "Pass123!",
+    "middleName": "Michael",
+    "username": "johndoe_2023",
+    "phoneNumber": "1234567890",
+    "dob": "1990-05-15",
+    "gender": "Male"
+  },
+  "Account_Details":{
+    "testCase": "Invalid email format",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "jane.smith@",
+    "password": "Pass123!",
+    "confirmPassword": "Pass123!"
+  },
+  "Address":{
+    "testCase": "Password mismatch",
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "email": "alice@example.com",
+    "password": "Password123",
+    "confirmPassword": "Password124"
+  },
+  "Security":{
+    "testCase": "Short password",
+    "firstName": "Bob",
+    "lastName": "Brown",
+    "email": "bob@example.com",
+    "password": "abc",
+    "confirmPassword": "abc"
+  }
+}

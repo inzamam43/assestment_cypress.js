@@ -1,0 +1,30 @@
+[
+  {
+    "testCase": "Missing required fields",
+    "personalInfo": {
+      "firstName": "",
+      "lastName": ""
+    },
+    "formControls": {
+      "singleSelect": "",
+      "date": "invalid-date"
+    }
+  },
+  {
+    "testCase": "Invalid format inputs",
+    "personalInfo": {
+      "email": "invalid-email",
+      "phoneNumber": "abc123"
+    },
+    "formControls": {
+      "url": "not-a-url",
+      "telephone": "123"
+    }
+  },
+  {
+    "testCase": "Empty multi-select",
+    "formControls": {
+      "multiSelect": []
+    }
+  }
+]

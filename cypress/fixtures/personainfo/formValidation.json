@@ -1,0 +1,49 @@
+{
+  "formValidation": {
+    "requiredFields": [
+      {
+        "field": "lastName",
+        "selector": "#lastName",
+        "errorMessage": "Last name is required",
+        "validation": "nonEmpty"
+      },
+      {
+        "field": "email",
+        "selector": "#email",
+        "errorMessage": "Email is required",
+        "validation": "emailFormat"
+      },
+      {
+        "field": "dateOfBirth",
+        "selector": "#dob",
+        "errorMessage": "Date of birth required",
+        "validation": "dateFormat"
+      },
+      {
+        "field": "gender",
+        "selector": "#gender",
+        "errorMessage": "Gender required",
+        "validation": "notDefault",
+        "defaultValue": "Select Gender"
+      }
+    ],
+    "sections": {
+      "accountDetails": {
+        "password": {
+          "errorMessage": "Password required",
+          "complexityRequirements": [
+            "minLength: 8",
+            "containsNumber",
+            "containsSpecialChar"
+          ]
+        }
+      },
+      "address": {
+        "zipCode": {
+          "errorMessage": "Zip Code required",
+          "validation": "postalCodeFormat"
+        }
+      }
+    }
+  }
+}
