@@ -8,12 +8,12 @@ class SecondTest {
   }
 
   selectDateOfBirth() {
-    // Set date (format: YYYY-MM-DD)
+   
     cy.get(":nth-child(4) > .form-control")
-      .type("2023-12-25") // December 25, 2023
-      .trigger("change"); // Trigger change event
+      .type("2023-12-25") 
+      .trigger("change"); 
 
-    // Verify the value
+  
     cy.get('input[type="date"]').should("have.value", "2023-12-25");
   }
 
@@ -42,25 +42,25 @@ class SecondTest {
   }
 
   selectRange() {
-    // Set value and trigger all necessary events
+    
     cy.get('input[type="range"]')
       .invoke("val", 75)
-      .trigger("input") // For React/Vue
-      .trigger("change") // For jQuery
-      .trigger("blur"); // Sometimes needed
+      .trigger("input") 
+      .trigger("change") 
+      .trigger("blur")
 
-    // Verify
+    
     cy.get('input[type="range"]').should("have.value", "75");
   }
 
   selectColor() {
-    // Set color directly (hex format)
-    cy.get('input[type="color"]')
-      .invoke("val", "#7f2f2f") // Red color
-      .trigger("input") // Trigger React/Vue state update
-      .trigger("change"); // Trigger jQuery/vanilla JS events
 
-    // Verify the value was set
+    cy.get('input[type="color"]')
+      .invoke("val", "#7f2f2f") 
+      .trigger("input") 
+      .trigger("change"); 
+
+    
     cy.get('input[type="color"]').should("have.value", "#7f2f2f");
   }
   customCheckBox() {
@@ -72,23 +72,22 @@ class SecondTest {
   }
 
   selectDate() {
-    // Set date (format: YYYY-MM-DD)
+    
     cy.get(":nth-child(22) > .form-control")
-      .type("2023-12-25") // December 25, 2023
-      .trigger("change"); // Trigger change event
+      .type("2023-12-25") 
+      .trigger("change"); 
 
-    // Verify the value
+   
     cy.get('input[type="date"]').should("have.value", "2023-12-25");
   }
   setTime() {
-    // Set date (format: YYYY-MM-DD)
+    
     cy.get(":nth-child(23) > .form-control")
-      .invoke("val", "18:30") // Set value directly
-      .trigger("input") // Trigger React/Vue updates
-      .trigger("change"); // Trigger jQuery/vanilla JS eventst
+      .invoke("val", "18:30") 
+      .trigger("input") 
+      .trigger("change"); 
 
-    // Verify the value
-    cy.get('input[type="time"]').should("have.value", "18:30");
+     cy.get('input[type="time"]').should("have.value", "18:30");
   }
 
   clickOnSubmitButton() {
