@@ -19,10 +19,17 @@ describe("vist the base url", () => {
     cy.visit(Cypress.env("baseUrl") + "/personalinfo");
   });
 
-  it("i enter the all Personal information for Account", () => {
+  it("fills out all Personal Information Page Fields", () => {
    
     personal.fillPersonalDetailForm(psoitiveTestData)
     
   });
+  it("validates all required fields before form submission",()=>{
+    personal.validateAllFormFields()
+
+
+  })
+
+
 
   });

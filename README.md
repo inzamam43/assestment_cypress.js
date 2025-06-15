@@ -6,7 +6,7 @@ This project demonstrates an automated login test suite using **Cypress**. It fo
 
 ---
 
-## 📁 Repository
+##  Repository
 
 Clone the repository:
 
@@ -21,3 +21,8 @@ npm install
 npx cypress open
 run all spec file 
 npx cypress run  
+run all spec on specific browser 
+npx cypress run --browser chrome
+npx cypress run --browser chrome --headed
+npx cypress run --browser firefox
+

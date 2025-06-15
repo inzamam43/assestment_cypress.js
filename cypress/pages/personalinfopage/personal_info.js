@@ -109,6 +109,58 @@ fillPersonalDetailForm(data){
     this.verifyAlertAfterSubmission()
 }
 
+validateAllFormFields() {
+  cy.fixture('personainfo/formValidation.json').then((validation) => {
+    const formSections = validation.formValidation;
+
+  
+    Object.entries(formSections).forEach(([sectionName, fields]) => {
+      cy.log(`Validating section: ${sectionName}`);
+
+      fields.forEach((fieldData) => {
+        const { selector, field, errorMessage } = fieldData;
+
+        if (field !== '' && selector.startsWith('#')) {
+          const fieldId = selector.replace('#', '');
+          cy.get(`label[for="${fieldId}"]`).should('contain.text', field);
+        }
+      });
+    });
+
+    
+    this.clickOnSubmitButton().click();
+
+Object.values(formSections).flat().forEach(({ selector, errorMessage }) => {
+  cy.get('body').then(($body) => {
+    if ($body.find(selector).length > 0) {
+      cy.get(selector).each(($el) => {
+        cy.wrap($el)
+          .parentsUntil('form') 
+          .parent()
+          .first()
+          .within(() => {
+            
+            cy.get('small.text-danger')
+              .contains(errorMessage)
+              .scrollIntoView()
+              .should('exist') 
+              .and(($msg) => {
+                const isVisible = Cypress.dom.isVisible($msg[0]);
+                expect(isVisible, `Visibility of error message: "${errorMessage}"`).to.be.true;
+              });
+          });
+      });
+    }
+  });
+});
+
+
+  });
+}
+
+
+
+
 
 
 }

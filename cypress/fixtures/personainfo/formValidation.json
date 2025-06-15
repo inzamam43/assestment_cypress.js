@@ -1,49 +1,114 @@
 {
   "formValidation": {
-    "requiredFields": [
+    "PersonalInformation": [
       {
-        "field": "lastName",
+        
+        "field": "First Name *",
+        "selector": "#firstName",
+        "errorMessage": "First name is required",
+        "validation": "nonEmpty"
+      },
+      {
+
+        "field": "Last Name *",
         "selector": "#lastName",
         "errorMessage": "Last name is required",
         "validation": "nonEmpty"
       },
       {
-        "field": "email",
+
+        "field": "Middle Name",
+        "selector": "#middleName",
+        "errorMessage": "Last name is required",
+        "validation": "nonEmpty"
+      },
+      {
+        "field": "Email *",
         "selector": "#email",
         "errorMessage": "Email is required",
-        "validation": "emailFormat"
+        "validation": "Invalid email format"
       },
       {
-        "field": "dateOfBirth",
-        "selector": "#dob",
-        "errorMessage": "Date of birth required",
-        "validation": "dateFormat"
+        "field": "Username *",
+        "selector": "#username",
+        "errorMessage": "Username is required",
+        "validation": "Min 5 characters"
       },
       {
-        "field": "gender",
+        "field": "Phone Number *",
+        "selector": "#phoneNumber",
+        "errorMessage": "Phone is required",
+        "validation": "Must be exactly 10 digits"
+      },
+     
+      {
+        "field": "Gender *",
         "selector": "#gender",
         "errorMessage": "Gender required",
-        "validation": "notDefault",
-        "defaultValue": "Select Gender"
+        "validation": "notDefault"      
       }
     ],
-    "sections": {
-      "accountDetails": {
-        "password": {
-          "errorMessage": "Password required",
-          "complexityRequirements": [
-            "minLength: 8",
-            "containsNumber",
-            "containsSpecialChar"
-          ]
-        }
+    "AccountDetails": [
+      {
+        
+        "field": "Password *",
+        "selector": "#password",
+        "errorMessage": "Password required",
+        "validation": "Min 8 characters"
       },
-      "address": {
-        "zipCode": {
-          "errorMessage": "Zip Code required",
-          "validation": "postalCodeFormat"
-        }
+      {
+
+        "field": "Confirm Password *",
+        "selector": "#confirmPassword",
+        "errorMessage": "Confirm password",
+        "validation": "Passwords must match"
       }
-    }
+    ],
+    "Address": [
+      {
+        
+        "field": "Country *",
+        "selector": "#country",
+        "errorMessage": "Country required",
+        "validation": "nonEmpty"
+      },
+      {
+
+        "field": "City *",
+        "selector": "#city",
+        "errorMessage": "City required",
+        "validation": "nonEmpty"
+      },
+      {
+
+        "field": "Address *",
+        "selector": "#address",
+        "errorMessage": "Address required",
+        "validation": "nonEmpty"
+      },
+      {
+
+        "field": "Zip Code *",
+        "selector": "#zipCode",
+        "errorMessage": "Zip Code required",
+        "validation": "nonEmpty"
+      }
+    ],
+    "Security": [
+      {
+        
+        "field": "Security Question *",
+        "selector": "#securityQuestion",
+        "errorMessage": "Security question required",
+        "validation": "nonEmpty"
+      },
+      {
+
+        "field": "Security Answer *",
+        "selector": "#securityAnswer",
+        "errorMessage": "Answer required",
+        "validation": "nonEmpty"
+      }
+    ]
   }
 }
